@@ -324,7 +324,7 @@ export default function AccommodationsPage() {
       </section>
 
       {/* What's Included Section */}
-      <section className="py-20 px-4 bg-[--color-lake-blue]">
+      <section className="py-20 px-4 bg-[#1e3a5f]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -335,7 +335,7 @@ export default function AccommodationsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               What&apos;s Included
             </h2>
-            <p className="text-white drop-shadow-sm">
+            <p className="text-white text-lg">
               Our cottages come equipped with everything you need
             </p>
           </motion.div>

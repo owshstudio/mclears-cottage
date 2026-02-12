@@ -305,7 +305,7 @@ export default function BoatsPage() {
       </section>
 
       {/* Black Lake Fishing Section */}
-      <section className="py-20 px-4 bg-[--color-lake-blue]">
+      <section className="py-20 px-4 bg-[#1e3a5f]">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -324,20 +324,20 @@ export default function BoatsPage() {
               </p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <Check className="text-[--color-sunset-gold]" size={20} />
-                  <span>Largemouth & Smallmouth Bass</span>
+                  <Check className="text-[#f59e0b]" size={20} />
+                  <span className="text-white">Largemouth & Smallmouth Bass</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Check className="text-[--color-sunset-gold]" size={20} />
-                  <span>Northern Pike</span>
+                  <Check className="text-[#f59e0b]" size={20} />
+                  <span className="text-white">Northern Pike</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Check className="text-[--color-sunset-gold]" size={20} />
-                  <span>Walleye</span>
+                  <Check className="text-[#f59e0b]" size={20} />
+                  <span className="text-white">Walleye</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Check className="text-[--color-sunset-gold]" size={20} />
-                  <span>Panfish (Perch, Bluegill, Crappie)</span>
+                  <Check className="text-[#f59e0b]" size={20} />
+                  <span className="text-white">Panfish (Perch, Bluegill, Crappie)</span>
                 </div>
               </div>
             </motion.div>

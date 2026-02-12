@@ -248,7 +248,7 @@ export default function VisitPage() {
       </section>
 
       {/* Pet Policy Section */}
-      <section className="py-20 px-4 bg-[--color-lake-blue]">
+      <section className="py-20 px-4 bg-[#1e3a5f]">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -582,7 +582,7 @@ export default function VisitPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-[--color-lake-blue] to-[--color-lake-blue-light]">
+      <section className="py-20 px-4 bg-gradient-to-r from-[#1e3a5f] to-[#2d4a6f]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -592,7 +592,7 @@ export default function VisitPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Questions? We&apos;re Here to Help!
           </h2>
-          <p className="text-xl text-white mb-8 drop-shadow-sm">
+          <p className="text-xl text-white mb-8">
             Contact us for more information or to make a reservation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

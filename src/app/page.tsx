@@ -257,7 +257,7 @@ export default function HomePage() {
       </section>
 
       {/* Live Cam Section */}
-      <section className="py-20 px-4 bg-[--color-lake-blue]">
+      <section className="py-20 px-4 bg-[#1e3a5f]">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -268,7 +268,7 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Live from Black Lake
             </h2>
-            <p className="text-white drop-shadow-sm">
+            <p className="text-white text-lg">
               Check out the current conditions at McLear&apos;s
             </p>
           </motion.div>
@@ -369,7 +369,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-[--color-lake-blue] to-[--color-lake-blue-light]">
+      <section className="py-20 px-4 bg-gradient-to-r from-[#1e3a5f] to-[#2d4a6f]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -379,7 +379,7 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready for Your Black Lake Adventure?
           </h2>
-          <p className="text-xl text-white mb-8 drop-shadow-sm">
+          <p className="text-xl text-white mb-8">
             Book your cottage, cabin, or campsite today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

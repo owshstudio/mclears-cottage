@@ -241,7 +241,7 @@ export default function AboutPage() {
       </section>
 
       {/* Historical Photos Section */}
-      <section className="py-20 px-4 bg-[--color-lake-blue]">
+      <section className="py-20 px-4 bg-[#1e3a5f]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -252,7 +252,7 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Through the Decades
             </h2>
-            <p className="text-white/90">
+            <p className="text-white text-lg">
               A look back at McLear&apos;s over the years
             </p>
           </motion.div>

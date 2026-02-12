@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Fish } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[--color-lake-blue] text-white">
+    <footer className="bg-[#1e3a5f] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
@@ -19,7 +19,7 @@ export default function Footer() {
               />
               <div>
                 <span className="font-bold text-xl">McLear&apos;s</span>
-                <span className="block text-xs text-white/90">Cottage Colony & Campground</span>
+                <span className="block text-xs text-white">Cottage Colony & Campground</span>
               </div>
             </div>
             <p className="text-white text-sm">
@@ -65,7 +65,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-[--color-sunset-gold]" />
-                <span className="text-white text-sm">
+                <span className="text-white">
                   2477 County Route #6<br />
                   Hammond, NY 13646
                 </span>
@@ -101,7 +101,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/90 text-sm">
+        <div className="border-t border-white/20 mt-8 pt-8 text-center text-white text-sm">
           <p>© {new Date().getFullYear()} McLear&apos;s Cottage Colony. All rights reserved.</p>
         </div>
       </div>
