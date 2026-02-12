@@ -55,7 +55,11 @@ const rules = [
   { icon: Volume2, rule: 'Quiet hours: 11 PM - 7 AM' },
   { icon: Clock, rule: '5 MPH speed limit on resort roads' },
   { icon: AlertCircle, rule: 'No firearms or fireworks' },
-  { icon: Fish, rule: 'Clean fish only in fish cleaning building' }
+  { icon: Fish, rule: 'Clean fish only in fish cleaning building' },
+  { icon: AlertCircle, rule: 'No campfires on grass - use fire rings only' },
+  { icon: AlertCircle, rule: 'No laundry clotheslines allowed' },
+  { icon: AlertCircle, rule: 'Gas cans must be stored in boat or vehicle, not under decks' },
+  { icon: AlertCircle, rule: 'Wash cars/boats at Fish Processing Building only (lake water tap)' }
 ];
 
 export default function VisitPage() {
@@ -171,6 +175,14 @@ export default function VisitPage() {
                         <Check size={18} className="text-[--color-forest-green] mt-0.5 shrink-0" />
                         <span><strong>Weekend stay:</strong> $100 deposit</span>
                       </li>
+                      <li className="flex items-start gap-2">
+                        <Check size={18} className="text-[--color-forest-green] mt-0.5 shrink-0" />
+                        <span><strong>Next year:</strong> $50 advance deposit (nonrefundable)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check size={18} className="text-[--color-forest-green] mt-0.5 shrink-0" />
+                        <span>Full payment due on arrival</span>
+                      </li>
                     </ul>
                   </div>
                   
@@ -187,8 +199,18 @@ export default function VisitPage() {
                         <AlertCircle size={18} className="text-red-500 mt-0.5 shrink-0" />
                         <span><strong>No refunds after April 1</strong></span>
                       </li>
+                      <li className="flex items-start gap-2">
+                        <AlertCircle size={18} className="text-amber-500 mt-0.5 shrink-0" />
+                        <span>Deposit holds reservation 24 hours after arrival time</span>
+                      </li>
                     </ul>
                   </div>
+                </div>
+                
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <p className="text-sm text-[--color-muted-foreground]">
+                    <strong>Payment:</strong> We accept cash, check, and credit cards. Credit card payments are subject to a 3.99% processing fee.
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -292,10 +314,22 @@ export default function VisitPage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <Check size={18} className="text-[--color-forest-green] mt-0.5 shrink-0" />
-                      Please clean up after your pet
+                      Please clean up after your pet (&quot;scoopers&quot; available at fish cleaning station)
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check size={18} className="text-[--color-forest-green] mt-0.5 shrink-0" />
+                      No pets on furniture or beds (bring a dog bed)
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check size={18} className="text-[--color-forest-green] mt-0.5 shrink-0" />
+                      You are responsible for any damages caused by pets
                     </li>
                   </ul>
                 </div>
+                
+                <p className="mt-6 text-sm text-amber-700 bg-amber-50 border border-amber-200 p-3 rounded-lg text-left">
+                  <strong>Note:</strong> Aggressive or excessively barking dogs are a problem. Please don&apos;t let your pet ruin your vacation. Also, please do not feed our resident dogs!
+                </p>
               </CardContent>
             </Card>
           </motion.div>
@@ -338,6 +372,29 @@ export default function VisitPage() {
                 </Card>
               </motion.div>
             ))}
+          </motion.div>
+          
+          {/* Safety Notice */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-8"
+          >
+            <Card className="border-red-200 bg-red-50">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-red-800 mb-4 flex items-center gap-2">
+                  <AlertCircle size={20} />
+                  Important Safety Information
+                </h3>
+                <ul className="space-y-2 text-sm text-red-700">
+                  <li>• <strong>Dock Safety:</strong> Small children and non-swimmers must wear personal flotation devices on docks. Never leave children unattended near the water.</li>
+                  <li>• <strong>Beach Notice:</strong> We are not a NYS Health Department approved bathing facility. The beach is not inspected.</li>
+                  <li>• Report any accidents or maintenance concerns to the front office immediately.</li>
+                  <li>• Parents are responsible for the conduct of their children at all times.</li>
+                </ul>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
       </section>
@@ -392,9 +449,19 @@ export default function VisitPage() {
                 </p>
               </div>
               
-              <div className="flex items-center gap-2 text-[--color-lake-blue]">
-                <Fish className="text-[--color-sunset-orange]" size={20} />
-                <span className="font-medium">Come hungry, leave happy!</span>
+              <div className="space-y-2 text-sm text-[--color-muted-foreground]">
+                <div className="flex items-center gap-2">
+                  <Fish className="text-[--color-sunset-orange]" size={18} />
+                  <span><strong>Live bait & ice</strong> available at office/diner</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin className="text-[--color-sunset-orange]" size={18} />
+                  <span>Fishing licenses & tackle within walking distance</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Car className="text-[--color-sunset-orange]" size={18} />
+                  <span>Convenience store 3.5 miles away</span>
+                </div>
               </div>
             </motion.div>
           </div>

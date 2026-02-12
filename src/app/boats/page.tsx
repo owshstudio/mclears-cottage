@@ -220,27 +220,30 @@ export default function BoatsPage() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
                   <div className="p-4 bg-[--color-soft-gray] rounded-lg">
                     <p className="text-sm text-[--color-muted-foreground] mb-2">Up to 14&apos;</p>
-                    <p className="text-xl font-bold text-[--color-lake-blue]">$7/day</p>
-                    <p className="text-lg font-semibold text-[--color-sunset-orange]">$45/week</p>
-                  </div>
-                  <div className="p-4 bg-[--color-soft-gray] rounded-lg">
-                    <p className="text-sm text-[--color-muted-foreground] mb-2">14&apos; - 18&apos;</p>
                     <p className="text-xl font-bold text-[--color-lake-blue]">$10/day</p>
-                    <p className="text-lg font-semibold text-[--color-sunset-orange]">$65/week</p>
+                    <p className="text-lg font-semibold text-[--color-sunset-orange]">$60/week</p>
                   </div>
                   <div className="p-4 bg-[--color-soft-gray] rounded-lg">
-                    <p className="text-sm text-[--color-muted-foreground] mb-2">Over 18&apos;</p>
+                    <p className="text-sm text-[--color-muted-foreground] mb-2">15&apos; - 18&apos;</p>
                     <p className="text-xl font-bold text-[--color-lake-blue]">$12/day</p>
                     <p className="text-lg font-semibold text-[--color-sunset-orange]">$75/week</p>
                   </div>
                   <div className="p-4 bg-[--color-soft-gray] rounded-lg">
-                    <p className="text-sm text-[--color-muted-foreground] mb-2">Pontoon</p>
+                    <p className="text-sm text-[--color-muted-foreground] mb-2">Over 18&apos;</p>
                     <p className="text-xl font-bold text-[--color-lake-blue]">$15/day</p>
                     <p className="text-lg font-semibold text-[--color-sunset-orange]">$100/week</p>
                   </div>
+                  <div className="p-4 bg-[--color-soft-gray] rounded-lg">
+                    <p className="text-sm text-[--color-muted-foreground] mb-2">Pontoon</p>
+                    <p className="text-xl font-bold text-[--color-lake-blue]">$20/day</p>
+                    <p className="text-lg font-semibold text-[--color-sunset-orange]">$125/week</p>
+                  </div>
                 </div>
-                <p className="text-center text-sm text-[--color-muted-foreground] mt-6">
-                  Maximum boat length: 20 feet. Dock slips feature 20&apos; steel frame with treated lumber.
+                <p className="text-center text-sm text-[--color-muted-foreground] mt-4">
+                  Maximum boat length: 20 feet. Add $1/day or $5/week for electric hookup.
+                </p>
+                <p className="text-center text-sm text-[--color-muted-foreground] mt-2">
+                  Plus applicable sales tax.
                 </p>
               </CardContent>
             </Card>

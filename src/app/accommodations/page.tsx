@@ -25,12 +25,13 @@ const cottages = [
   {
     title: 'Lakefront 2-Bedroom',
     image: '/images/gal02.jpg',
-    price: '$830',
+    price: '$830-870',
     period: 'per week',
     beds: '2 Bedrooms',
     capacity: 'Sleeps 4-6',
     amenities: ['Full Kitchen', 'Cable TV', 'Heat', 'Shower', 'Lake View'],
-    featured: true
+    featured: true,
+    note: 'Cottages #2, #3, #5, #16, #17'
   },
   {
     title: 'Lakefront 3-4 Bedroom',
@@ -40,17 +41,19 @@ const cottages = [
     beds: '3-4 Bedrooms',
     capacity: 'Sleeps 6-8',
     amenities: ['Full Kitchen', 'Cable TV', 'Heat', 'Shower', 'Lake View'],
-    featured: true
+    featured: true,
+    note: 'Cottages #1, #4, #14, #15'
   },
   {
     title: 'Non-Lakefront Cottage',
     image: '/images/gal04.jpg',
-    price: 'Call',
-    period: 'for pricing',
-    beds: 'Various Sizes',
-    capacity: 'Various',
+    price: '$830-930',
+    period: 'per week',
+    beds: '2-4 Bedrooms',
+    capacity: 'Sleeps 4-8',
     amenities: ['Full Kitchen', 'Cable TV', 'Heat', 'Shower'],
-    featured: false
+    featured: false,
+    note: 'Cottages #6, #7, #9, #10'
   }
 ];
 
@@ -58,10 +61,11 @@ const cabins = [
   {
     title: 'Camping Cabin',
     image: '/images/gal05.jpg',
-    price: '$360 - $420',
+    price: '$360-420',
     period: 'per week',
-    description: 'Rustic cabins with beds only. Perfect for those who want a roof over their head but love the camping experience.',
-    note: 'No kitchen or bathroom - beds only. Access to resort facilities.'
+    nightlyPrice: '$95-125/night',
+    description: '12x12 room with 1 full bed and 1 set of bunk beds. Perfect for those who want a roof over their head but love the camping experience.',
+    note: 'No kitchen or bathroom. Access to resort bathrooms, showers, and facilities.'
   }
 ];
 
@@ -196,6 +200,23 @@ export default function AccommodationsPage() {
               </motion.div>
             ))}
           </motion.div>
+          
+          {/* Pricing Info Box */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-8 bg-amber-50 border border-amber-200 rounded-xl p-6"
+          >
+            <h3 className="font-semibold text-amber-800 mb-3">Pricing Details</h3>
+            <ul className="space-y-2 text-sm text-amber-700">
+              <li>• Weekly rates shown are for 1-4 guests. Add $20/week for 5th guest, $40/week for 6th guest.</li>
+              <li>• <strong>Daily rates</strong> available in May, September & October only (2-night min, 3 nights on holidays).</li>
+              <li>• <strong>30% off midweek</strong> (Mon-Fri) with 3-night minimum in off-season.</li>
+              <li>• Add 3% bed tax. Nightly stays add 8% sales tax.</li>
+              <li>• No air conditioning. Bring your own window unit for $40/week per unit.</li>
+            </ul>
+          </motion.div>
         </div>
       </section>
 
@@ -293,28 +314,37 @@ export default function AccommodationsPage() {
                 Bring your RV or pitch a tent and enjoy the beautiful Black Lake setting. Our campsites give you access to all resort amenities.
               </p>
               
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <Check className="text-[--color-forest-green] mt-1 shrink-0" size={20} />
-                  <span>RV sites with electric and water hookups</span>
+              <div className="space-y-4 mb-6">
+                <div className="p-4 bg-[--color-soft-gray] rounded-lg">
+                  <h4 className="font-semibold text-[--color-lake-blue] mb-2">Full Hookup Lakefront Sites (#18-22)</h4>
+                  <p className="text-sm text-[--color-muted-foreground] mb-2">Water, 30 amp electric, sewer • Max trailer 30&apos;, 5th wheel 26&apos;</p>
+                  <p className="text-[--color-sunset-orange] font-bold">$350-400/week • $70-74/night</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Check className="text-[--color-forest-green] mt-1 shrink-0" size={20} />
-                  <span>Tent camping sites available</span>
+                <div className="p-4 bg-[--color-soft-gray] rounded-lg">
+                  <h4 className="font-semibold text-[--color-lake-blue] mb-2">Water & Electric Sites (Non-Lakefront)</h4>
+                  <p className="text-sm text-[--color-muted-foreground] mb-2">20 amp electric, water • Cable TV not available</p>
+                  <p className="text-[--color-sunset-orange] font-bold">$180-280/week • $30-55/night</p>
                 </div>
+              </div>
+              
+              <div className="space-y-2 mb-8 text-sm text-[--color-muted-foreground]">
                 <div className="flex items-start gap-3">
-                  <Check className="text-[--color-forest-green] mt-1 shrink-0" size={20} />
+                  <Check className="text-[--color-forest-green] mt-0.5 shrink-0" size={16} />
                   <span>Access to bathrooms and shower facilities</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check className="text-[--color-forest-green] mt-1 shrink-0" size={20} />
+                  <Check className="text-[--color-forest-green] mt-0.5 shrink-0" size={16} />
+                  <span>Dump station available</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="text-[--color-forest-green] mt-0.5 shrink-0" size={16} />
                   <span>Use of dock and boat launch</span>
                 </div>
               </div>
 
               <Button asChild className="bg-[--color-lake-blue] hover:bg-[--color-lake-blue-light]">
                 <Link href="/contact">
-                  Contact for Rates
+                  Reserve a Site
                   <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
