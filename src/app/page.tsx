@@ -61,7 +61,7 @@ export default function HomePage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[--color-lake-blue]/80 via-[--color-lake-blue]/60 to-[--color-lake-blue]/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[--color-lake-blue]/80 via-[--color-lake-blue]/75 to-[--color-lake-blue]/85" />
         
         <motion.div
           initial={{ opacity: 0, y: 30 }}

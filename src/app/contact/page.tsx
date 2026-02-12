@@ -91,7 +91,7 @@ export default function ContactPage() {
           style={{ filter: 'blur(0.5px)' }}
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[--color-lake-blue]/80 via-[--color-lake-blue]/65 to-[--color-lake-blue]/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[--color-lake-blue]/80 via-[--color-lake-blue]/80 to-[--color-lake-blue]/75" />
         
         <motion.div
           initial={{ opacity: 0, y: 30 }}
