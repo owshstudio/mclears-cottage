@@ -61,7 +61,7 @@ export default function HomePage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[--color-lake-blue]/80 via-[--color-lake-blue]/75 to-[--color-lake-blue]/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-[--color-lake-blue]/70 to-[--color-lake-blue]/85" />
         
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -69,10 +69,10 @@ export default function HomePage() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative z-10 text-center px-4 max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 drop-shadow-lg [text-shadow:_0_2px_12px_rgb(0_0_0_/_60%),_0_4px_24px_rgb(0_0_0_/_40%)]">
             Welcome to McLear&apos;s
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-lg">
+          <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-lg [text-shadow:_0_2px_8px_rgb(0_0_0_/_50%)]">
             Black Lake&apos;s Favorite Destination Since the 1920s
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

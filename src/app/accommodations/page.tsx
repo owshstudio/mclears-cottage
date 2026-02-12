@@ -105,7 +105,7 @@ export default function AccommodationsPage() {
           style={{ filter: 'blur(0.5px)' }}
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[--color-lake-blue]/80 via-[--color-lake-blue]/80 to-[--color-lake-blue]/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-[--color-lake-blue]/70 to-[--color-lake-blue]/85" />
         
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -113,10 +113,10 @@ export default function AccommodationsPage() {
           transition={{ duration: 0.8 }}
           className="relative z-10 text-center px-4"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg [text-shadow:_0_2px_12px_rgb(0_0_0_/_60%),_0_4px_24px_rgb(0_0_0_/_40%)]">
             Our Accommodations
           </h1>
-          <p className="text-xl text-white max-w-2xl mx-auto drop-shadow-md">
+          <p className="text-xl text-white max-w-2xl mx-auto drop-shadow-lg [text-shadow:_0_2px_8px_rgb(0_0_0_/_50%)]">
             From cozy lakefront cottages to rustic camping cabins
           </p>
         </motion.div>
