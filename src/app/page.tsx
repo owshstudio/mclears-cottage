@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { Home, Tent, Ship, MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import ActivityIcons from '@/components/ActivityIcons';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -134,6 +135,9 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Activity Icons Section */}
+      <ActivityIcons />
 
       {/* Features Section */}
       <section className="py-16 px-4 bg-[--color-soft-gray]">

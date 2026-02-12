@@ -3,9 +3,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Heart, Users, Fish, Calendar, ArrowRight } from 'lucide-react';
+import { Heart, Users, Fish, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import HeritageTimeline from '@/components/HeritageTimeline';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -20,48 +21,6 @@ const staggerContainer = {
     }
   }
 };
-
-const historicalPhotos = [
-  {
-    src: '/images/history-1920s.jpg',
-    decade: '1920s',
-    caption: 'The early days on Black Lake'
-  },
-  {
-    src: '/images/history-1926.jpg',
-    decade: '1926',
-    caption: 'Shoreline view'
-  },
-  {
-    src: '/images/history-1940s.jpg',
-    decade: '1940s',
-    caption: 'The original campground'
-  },
-  {
-    src: '/images/history-1950s.jpg',
-    decade: '1950s',
-    caption: 'Guests enjoying the lake'
-  },
-  {
-    src: '/images/history-1960s.jpg',
-    decade: '1960s',
-    caption: 'Cottages and dock'
-  },
-  {
-    src: '/images/history-1970s.jpg',
-    decade: '1970s',
-    caption: 'Sailing regatta on Black Lake'
-  }
-];
-
-const milestones = [
-  { year: '1920s', event: 'McLear\'s Cottage Colony is founded on Black Lake' },
-  { year: '1940s', event: 'Expansion of campground facilities and ice house' },
-  { year: '1950s', event: 'Growing reputation as a fishing destination' },
-  { year: '1960s', event: 'Addition of more lakefront cottages' },
-  { year: '1970s', event: 'Hosting sailing regattas and fishing tournaments' },
-  { year: 'Today', event: 'Still family-owned, welcoming the next generation of guests' }
-];
 
 export default function AboutPage() {
   return (
@@ -194,101 +153,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <div className="inline-flex items-center gap-2 text-[--color-sunset-orange] mb-4">
-              <Calendar size={24} />
-              <span className="font-semibold">Through the Years</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[--color-lake-blue]">
-              Our Journey
-            </h2>
-          </motion.div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-[--color-lake-blue]/20 -translate-x-1/2" />
-            
-            <div className="space-y-8">
-              {milestones.map((milestone, index) => (
-                <motion.div
-                  key={milestone.year}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  className={`relative flex items-center gap-4 ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
-                >
-                  <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'} pl-12 md:pl-0`}>
-                    <span className="text-2xl font-bold text-[--color-sunset-orange]">{milestone.year}</span>
-                    <p className="text-[--color-muted-foreground] mt-1">{milestone.event}</p>
-                  </div>
-                  <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-[--color-lake-blue] rounded-full -translate-x-1/2 border-4 border-white shadow" />
-                  <div className="flex-1 hidden md:block" />
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Historical Photos Section */}
-      <section className="py-20 px-4 bg-[#1e3a5f]">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Through the Decades
-            </h2>
-            <p className="text-white text-lg">
-              A look back at McLear&apos;s over the years
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-3 gap-4"
-          >
-            {historicalPhotos.map((photo) => (
-              <motion.div
-                key={photo.decade}
-                variants={fadeInUp}
-                className="relative group"
-              >
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src={photo.src}
-                    alt={`McLear's in the ${photo.decade}`}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                    <span className="text-lg font-bold">{photo.decade}</span>
-                    <p className="text-sm text-white/80">{photo.caption}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      {/* Heritage Timeline Section */}
+      <HeritageTimeline />
 
       {/* CTA Section */}
       <section className="py-20 px-4">

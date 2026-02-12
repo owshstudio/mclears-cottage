@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { Bed, Users, Tv, Flame, ShowerHead, UtensilsCrossed, Tent, Caravan, ArrowRight, Check, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import AccommodationComparisonTable from '@/components/AccommodationComparisonTable';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -121,6 +122,9 @@ export default function AccommodationsPage() {
           </p>
         </motion.div>
       </section>
+
+      {/* Comparison Table */}
+      <AccommodationComparisonTable />
 
       {/* Cottages Section */}
       <section className="py-20 px-4">
