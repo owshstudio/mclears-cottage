@@ -44,10 +44,10 @@ const features = [
 ];
 
 const galleryImages = [
-  '/images/gal01.jpg',
-  '/images/gal06.jpg',
-  '/images/gal09.jpg',
-  '/images/gal14.jpg',
+  { src: '/images/gal01.jpg', alt: 'Lakefront cottage view at McLear\'s on Black Lake' },
+  { src: '/images/gal06.jpg', alt: 'Sunset over Black Lake from McLear\'s dock' },
+  { src: '/images/gal09.jpg', alt: 'Family fishing on Black Lake' },
+  { src: '/images/gal14.jpg', alt: 'Peaceful morning at McLear\'s Cottage Colony' },
 ];
 
 export default function HomePage() {
@@ -294,41 +294,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="py-20 px-4 bg-[--color-soft-gray]">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-8"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[--color-lake-blue] mb-4">
-              Experience McLear&apos;s
-            </h2>
-            <p className="text-[--color-muted-foreground]">
-              Take a virtual tour of our cottage colony
-            </p>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="aspect-video rounded-xl overflow-hidden shadow-2xl"
-          >
-            <iframe
-              src="https://www.youtube.com/embed/2KFP4vbO0Tw"
-              className="w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title="McLear's Cottage Colony Video Tour"
-            />
-          </motion.div>
-        </div>
-      </section>
-
       {/* Gallery Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -353,15 +318,15 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="grid grid-cols-2 md:grid-cols-4 gap-4"
           >
-            {galleryImages.map((src, index) => (
+            {galleryImages.map((image) => (
               <motion.div
-                key={src}
+                key={image.src}
                 variants={fadeInUp}
                 className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow max-w-[300px] mx-auto"
               >
                 <Image
-                  src={src}
-                  alt={`Gallery image ${index + 1}`}
+                  src={image.src}
+                  alt={image.alt}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 150px, 200px"
